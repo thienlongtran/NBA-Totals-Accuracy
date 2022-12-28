@@ -1,0 +1,2 @@
+# Data Information
+These are historical OU Lines from a variety of sportsbooks acquired from [The Odds API](https://the-odds-api.com/). Game dates for the OU Lines were acquired from the `games_list` directory.
