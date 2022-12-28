@@ -1,0 +1,2 @@
+# Data Information
+These Excel sheets are sourced from Sportsbook Reviews Online's [historical NBA scores and odds archive](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba/nbaoddsarchives.htm). Running `process_data.py` will process the sheets and return a list of historical games and their final scores.
