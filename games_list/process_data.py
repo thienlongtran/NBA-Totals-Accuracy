@@ -53,15 +53,15 @@ for file in tqdm(os.listdir(".")):
         date = home = away = points = None
         for row in df.itertuples():
             if count % 2 == 0:
-                date = str("0" + str(row[1])) if len(str(row[1])) == 3 else str(str(row[1]))
+                date = str("0" + str(row.Date)) if len(str(row.Date)) == 3 else str(str(row.Date))
                 year = start_year if int(date[:2]) in fall_months else end_year if int(date[:2]) in spring_months else "N/A"
                 date = year + "-" + date[:2] + "-" + date[2:]
-                away = team_codes.get(str(row[4]))
-                points = row[9]
+                away = team_codes.get(row.Team)
+                points = row.Final
                 count += 1
             else:
-                home = team_codes.get(str(row[4]))
-                points += row[9]
+                home = team_codes.get(row.Team)
+                points += row.Final
                 game = {
                     "Date": date,
                     "Home": home,
